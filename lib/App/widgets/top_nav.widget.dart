@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../main.dart';
-import '../res/responsive.dart';
+import '../../main.dart';
+import '../res/responsive.res.dart';
 
 
 class TopNav extends StatelessWidget {

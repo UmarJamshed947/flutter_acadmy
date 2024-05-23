@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_acadmy/routes/app_route_parser.dart';
-import 'package:flutter_acadmy/routes/router_delegate.dart';
+import 'package:flutter_acadmy/App/routes/app_route_parser.router.dart';
+import 'package:flutter_acadmy/App/routes/router_delegate.router.dart';
 
 
 void main() {

@@ -3,12 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 
-import '../pages/about.dart';
-import '../pages/contact.dart';
-import '../pages/course_detail.dart';
-import '../pages/courses.dart';
-import '../pages/error_404.dart';
-import '../pages/home_page.dart';
+import '../pages/about.page.dart';
+import '../pages/contact.page.dart';
+import '../pages/course.detail.page.dart';
+import '../pages/courses.page.dart';
+import '../pages/error.404.page.dart';
+import '../pages/home.page.dart';
 
 class AppRouterDelegate extends RouterDelegate<Uri>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<Uri> {

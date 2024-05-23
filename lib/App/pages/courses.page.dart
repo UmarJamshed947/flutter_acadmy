@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../res/responsive.dart';
-import '../widgets/drawer_nav.dart';
-import '../widgets/top_nav.dart';
+import '../res/responsive.res.dart';
+import '../widgets/drawer_nav.widget.dart';
+import '../widgets/top_nav.widget.dart';
 
 
 class CoursesPage extends StatelessWidget {

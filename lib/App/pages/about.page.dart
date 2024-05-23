@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_acadmy/res/responsive.dart';
-import 'package:flutter_acadmy/widgets/top_nav.dart';
+import 'package:flutter_acadmy/App/res/responsive.res.dart';
+import 'package:flutter_acadmy/App/widgets/top_nav.widget.dart';
 
-import '../widgets/drawer_nav.dart';
+import '../widgets/drawer_nav.widget.dart';
 
 
 class AboutPage extends StatelessWidget {

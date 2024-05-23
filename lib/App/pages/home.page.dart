@@ -1,14 +1,16 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../../main.dart';
+import '../res/assets.red.dart';
+import '../res/responsive.res.dart';
+import '../widgets/call_to_action.widget.dart';
+import '../widgets/course_card.widget.dart';
+import '../widgets/drawer_nav.widget.dart';
+import '../widgets/featured_section.widget.dart';
+import '../widgets/footer.widget.dart';
+import '../widgets/header.widget.dart';
+import '../widgets/top_nav.widget.dart';
 
-import '../res/assets.dart';
-import '../res/responsive.dart';
-import '../widgets/call_action.dart';
-import '../widgets/course_card.dart';
-import '../widgets/featured_section.dart';
-import '../widgets/footer.dart';
-import '../widgets/header.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -16,44 +18,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: <Widget>[
-          AppBar(
-            backgroundColor: Colors.blue,
-            title: Text('Flutter Academy'),
-            elevation: kIsWeb ? 0 : null,
-            centerTitle: kIsWeb ? false : null,
-            actions: (MediaQuery.of(context).size.width <= ScreenSizes.md)
-                ? null
-                : [
-              TextButton(
-                child: Text("Home"),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                ),
-                onPressed: () {},
-              ),
-              TextButton(
-                child: Text("Courses"),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                ),
-                onPressed: () {},
-              ),
-              TextButton(
-                child: Text("About"),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                ),
-                onPressed: () {},
-              ),
-              TextButton(
-                child: Text("Contact"),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                ),
-                onPressed: () {},
-              ),
-            ],
-          ),
+          TopNav(),
           Header(),
           const SizedBox(height: 40.0),
           Padding(
@@ -73,7 +38,9 @@ class HomePage extends StatelessWidget {
                   image: Assets.course,
                   description:
                   "Flutter web is stable. But there are no proper course focused on Flutter web. So, In this course we will learn what Flutter web is good for and we will build a production grade application along the way.",
-                  onActionPressed: () {},
+                  onActionPressed: () {
+                    routerDelegate.go('/courses/taking-flutter-to-web');
+                  },
                 ),
                 const SizedBox(width: 20.0),
                 CourseCard(
@@ -81,7 +48,9 @@ class HomePage extends StatelessWidget {
                   image: Assets.course,
                   description:
                   "Flutter web is stable. But there are no proper course focused on Flutter web. So, In this course we will learn what Flutter web is good for and we will build a production grade application along the way.",
-                  onActionPressed: () {},
+                  onActionPressed: () {
+                    routerDelegate.go('/courses/taking-flutter-to-web-2');
+                  },
                 ),
               ],
             ),
@@ -126,39 +95,7 @@ class HomePage extends StatelessWidget {
       ),
       drawer: MediaQuery.of(context).size.width > ScreenSizes.md
           ? null
-          : Drawer(
-        child: ListView(
-          children: [
-            Container(
-              color: Theme.of(context).primaryColor,
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Flutter Academy",
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge
-                    ?.copyWith(color: Colors.white),
-              ),
-            ),
-            ListTile(
-              title: Text("Home"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Courses"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("About"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Contact"),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
+          : DrawerNav(),
     );
   }
 }

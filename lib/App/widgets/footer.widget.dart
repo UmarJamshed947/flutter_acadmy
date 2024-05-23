@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../res/responsive.dart';
+import '../res/responsive.res.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);

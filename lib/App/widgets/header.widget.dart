@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../res/assets.dart';
+import '../res/assets.red.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
