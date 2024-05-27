@@ -42,9 +42,9 @@ class _LoginViewState extends State<LoginView> {
         Consumer(builder: (context, ref, child) {
           return ElevatedButton(
             onPressed: () {
-              if (ref
-                  .read(authVM)
-                  .login(email: _email.text, password: _password.text)) {
+              if (ref.read(authVM).login(
+                  email: _email.text,
+                  password: _password.text)) {
                 //logged in
               } else {
                 // error
